@@ -1,0 +1,32 @@
+type Query{
+  userBasics: [UserBasic!]!
+}
+
+type Mutation{
+  addUserBasic(
+  name: String!,
+  real_name: String!,
+  email: String!,
+  university_inscription: String!,
+  password: String!,
+  age: Int!,
+  id_degree: Int!,
+  login_type: Int!,
+  status: Int!,
+  gender: String!, ) : UserBasic!
+}
+
+type UserBasic{
+  id: ID!
+  name: String!,
+  real_name: String!,
+  email: String!,
+  university_inscription: String!,
+  password: String,
+  password_hash: String,
+  age: Int!,
+  id_degree: Int!,
+  login_type: Int!,
+  status: Int!,
+  gender: String!,
+}

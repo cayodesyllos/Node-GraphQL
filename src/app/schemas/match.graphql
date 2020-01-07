@@ -1,0 +1,18 @@
+
+type Mutation{
+  addMatch(
+    id_user1: ID!,
+    id_user2: ID!,
+  ) : Match!
+  match(id: ID!) : Match!
+}
+
+type Query{
+  matches: [Match!]!
+}
+
+type Match{
+  id: ID!,
+  id_user1: ID!,
+  id_user2: ID!,
+}

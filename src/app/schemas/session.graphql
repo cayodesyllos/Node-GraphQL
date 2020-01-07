@@ -1,0 +1,14 @@
+type Mutation{
+  addSession(
+    email: String!,
+    password: String!,
+  ) : Session!
+}
+
+type Session{
+  id: ID
+  name: String,
+  email: String,
+  password: String,
+  jwt: String!,
+}

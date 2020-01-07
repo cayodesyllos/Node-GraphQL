@@ -1,0 +1,18 @@
+type Mutation{
+    addMessage(
+    id_match: ID,
+    content: String,
+    id_owner: ID
+  ) : Message!,
+}
+
+type Query{
+  messages(id_match: ID): [Message!]!
+}
+
+type Message{
+  id: ID!,
+  id_owner: ID!,
+  id_match: ID!,
+  content: String!
+}
